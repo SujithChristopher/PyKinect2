@@ -476,7 +476,7 @@ class KinectBodyFrameData(object):
             self.floor_clip_plane = bodyFrame.FloorClipPlane
             self.relative_time = bodyFrame.RelativeTime
 
-            self.bodies = numpy.ndarray((max_body_count), dtype=numpy.object)
+            self.bodies = numpy.ndarray((max_body_count), dtype=object)
             for i in range(0, max_body_count):
                self.bodies[i] = KinectBody(body_frame_data[i])
 
